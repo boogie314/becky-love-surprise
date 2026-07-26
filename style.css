@@ -1,0 +1,1108 @@
+/* ==========================
+   Google Font
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background:#020b24;
+}
+
+/* ==========================
+   Animated Background
+========================== */
+
+.background{
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,#0f2c7a 0%,#05163e 40%,#010712 100%);
+
+    animation:bgMove 10s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove{
+
+    0%{
+        transform:scale(1);
+        filter:hue-rotate(0deg);
+    }
+
+    100%{
+        transform:scale(1.15);
+        filter:hue-rotate(12deg);
+    }
+
+}
+
+/* ==========================
+   Login Card
+========================== */
+
+.login-card{
+
+    width:90%;
+    max-width:420px;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,215,0,.35);
+
+    box-shadow:
+
+    0 0 18px rgba(255,215,0,.18),
+
+    0 0 70px rgba(255,215,0,.08);
+
+    animation:cardAppear 1.2s ease;
+
+    z-index:5;
+
+}
+
+@keyframes cardAppear{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px) scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+.login-card h1{
+
+    font-size:60px;
+    margin-bottom:10px;
+
+}
+
+.login-card h2{
+
+    color:#FFD700;
+    font-size:30px;
+
+}
+
+.login-card p{
+
+    color:#dddddd;
+
+    margin-top:15px;
+    margin-bottom:30px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+.login-card input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    margin-bottom:18px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,215,0,.3);
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.4s;
+
+}
+
+.login-card input::placeholder{
+
+    color:#cfcfcf;
+
+}
+
+.login-card input:focus{
+
+    outline:none;
+
+    border-color:#FFD700;
+
+    box-shadow:0 0 15px gold;
+
+}
+
+/* ==========================
+   Button
+========================== */
+
+.login-card button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#02112e;
+
+    background:linear-gradient(135deg,#FFD700,#ffef8b,#d4af37);
+
+    transition:.35s;
+
+}
+
+.login-card button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 0 20px gold,
+
+    0 0 50px rgba(255,215,0,.45);
+
+}
+
+/* ==========================
+   Forgot Password
+========================== */
+
+.login-card a{
+
+    display:inline-block;
+
+    margin-top:22px;
+
+    text-decoration:none;
+
+    color:#FFD700;
+
+    transition:.3s;
+
+}
+
+.login-card a:hover{
+
+    color:white;
+
+}
+
+/* ==========================
+   Floating Hearts
+========================== */
+
+.background::before,
+.background::after{
+
+    content:"❤";
+
+    position:absolute;
+
+    color:rgba(255,215,0,.15);
+
+    font-size:45px;
+
+    animation:float 12s linear infinite;
+
+}
+
+.background::before{
+
+    left:15%;
+    bottom:-80px;
+
+}
+
+.background::after{
+
+    right:20%;
+    bottom:-120px;
+
+    animation-delay:5s;
+
+}
+
+@keyframes float{
+
+    from{
+
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:500px){
+
+.login-card{
+    width:95%;
+    padding:20px;
+}
+
+.login-card h1{
+    font-size:45px;
+}
+
+.login-card h2{
+    font-size:22px;
+}
+
+.login-card p{
+    font-size:14px;
+    line-height:1.6;
+}
+
+.login-card input{
+    padding:14px;
+    font-size:16px;
+}
+
+.login-card button{
+    padding:14px;
+    font-size:16px;
+}
+
+.welcome-card,
+.letter-card,
+.final-card{
+    width:95%;
+    padding:25px;
+    max-height:90vh;
+    overflow-y:auto;
+}
+
+#typing{
+    font-size:28px;
+}
+
+.subtitle{
+    font-size:16px;
+}
+
+.heart{
+    font-size:55px;
+}
+
+.big-heart{
+    font-size:65px;
+}
+
+.timeline-page{
+    padding:30px 15px;
+}
+
+.timeline{
+    padding-left:20px;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+.gallery img{
+    width:100%;
+}
+
+.signature{
+    font-size:20px;
+}
+
+.signature span{
+    font-size:16px;
+}
+
+}/* Gold Particles */
+
+@keyframes rise{
+
+    from{
+
+        transform:translateY(0) scale(.5);
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
+
+    }
+
+}
+
+/* Unlock Screen */
+
+.unlock h1{
+
+    font-size:70px;
+    margin-bottom:20px;
+
+}
+
+.unlock h2{
+
+    color:#FFD700;
+    margin-bottom:15px;
+
+}
+
+.unlock p{
+
+    color:white;
+
+}/* ===========================
+WELCOME PAGE
+=========================== */
+
+.welcome-body{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+background:linear-gradient(180deg,#02122f,#071c4d,#010814);
+
+overflow:hidden;
+
+}
+
+/* Stars */
+
+.stars{
+
+position:fixed;
+
+width:100%;
+height:100%;
+
+background-image:
+
+radial-gradient(white 1px,transparent 1px);
+
+background-size:35px 35px;
+
+opacity:.35;
+
+animation:twinkle 5s linear infinite;
+
+}
+
+@keyframes twinkle{
+
+50%{
+
+opacity:.7;
+
+}
+
+}
+
+/* Card */
+
+.welcome-card{
+
+width:90%;
+
+max-width:700px;
+
+padding:50px;
+
+text-align:center;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,215,0,.3);
+
+box-shadow:
+
+0 0 40px rgba(255,215,0,.2);
+
+z-index:5;
+
+animation:fadeUp 1.2s;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Heart */
+
+.heart{
+
+font-size:75px;
+
+animation:heartbeat 1.2s infinite;
+
+margin-bottom:20px;
+
+}
+
+@keyframes heartbeat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* Heading */
+
+#typing{
+
+color:#FFD700;
+
+font-size:42px;
+
+margin-bottom:25px;
+
+min-height:60px;
+
+}
+
+/* Subtitle */
+
+.subtitle{
+
+color:white;
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-bottom:35px;
+
+}
+
+/* Button */
+
+#beginBtn{
+
+padding:18px 35px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+background:linear-gradient(135deg,#FFD700,#FFE766,#D4AF37);
+
+color:#02122f;
+
+transition:.35s;
+
+}
+
+#beginBtn:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+
+0 0 25px gold,
+
+0 0 50px rgba(255,215,0,.4);
+
+}/* ==========================
+LOVE LETTER
+========================== */
+
+.letter-page{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+background:linear-gradient(180deg,#03112d,#061b47,#010814);
+
+overflow:hidden;
+
+padding:20px;
+
+}
+
+.letter-card{
+
+width:90%;
+max-width:850px;
+
+padding:40px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,215,0,.3);
+
+border-radius:30px;
+
+box-shadow:0 0 40px rgba(255,215,0,.2);
+
+z-index:10;
+
+}
+
+.letter-card h1{
+
+text-align:center;
+
+color:#FFD700;
+
+margin-bottom:30px;
+
+}
+
+#loveLetter{
+
+color:white;
+
+line-height:2;
+
+font-size:17px;
+
+min-height:300px;
+
+white-space:pre-wrap;
+
+}
+
+#nextBtn{
+
+display:none;
+
+margin:35px auto 0;
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+background:linear-gradient(135deg,#FFD700,#FFE766,#D4AF37);
+
+color:#02122f;
+
+}
+
+.petals{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.petal{
+
+position:absolute;
+
+top:-50px;
+
+font-size:22px;
+
+animation:fall linear forwards;
+
+}
+
+@keyframes fall{
+
+to{
+
+transform:translateY(110vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}/* TIMELINE */
+
+.timeline-page{
+
+background:linear-gradient(#04132f,#071b4c,#010814);
+
+min-height:100vh;
+
+padding:60px 20px;
+
+}
+
+.timeline-container{
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.timeline-container h1{
+
+text-align:center;
+
+color:#FFD700;
+
+margin-bottom:60px;
+
+}
+
+.timeline{
+
+position:relative;
+
+border-left:4px solid gold;
+
+padding-left:30px;
+
+}
+
+.event{
+
+margin-bottom:50px;
+
+}
+
+.content{
+
+background:rgba(255,255,255,.05);
+
+padding:25px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,215,0,.3);
+
+backdrop-filter:blur(10px);
+
+}
+
+.content h2{
+
+color:#FFD700;
+
+margin-bottom:15px;
+
+}
+
+.content p{
+
+color:white;
+
+line-height:1.8;
+
+}
+
+#galleryBtn{
+
+margin-top:50px;
+
+width:100%;
+
+padding:18px;
+
+font-size:18px;
+
+font-weight:bold;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:linear-gradient(135deg,#FFD700,#FFE766,#D4AF37);
+
+}
+
+/* GALLERY */
+
+.gallery-page{
+
+background:linear-gradient(#02112d,#061b47,#010814);
+
+padding:50px 20px;
+
+text-align:center;
+
+}
+
+.gallery-page h1{
+
+color:#FFD700;
+
+margin-bottom:40px;
+
+}
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+max-width:1000px;
+
+margin:auto;
+
+}
+
+.gallery img{
+
+width:100%;
+
+border-radius:20px;
+
+border:3px solid gold;
+
+transition:.4s;
+
+cursor:pointer;
+
+box-shadow:0 0 20px rgba(255,215,0,.2);
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 35px gold;
+
+}
+
+#next{
+
+margin-top:40px;
+
+padding:18px 40px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+background:linear-gradient(135deg,#FFD700,#FFE766,#D4AF37);
+
+}/* ==========================
+FINAL PAGE
+========================== */
+
+.final-page{
+
+background:linear-gradient(#010814,#031c46,#071d4d);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+padding:20px;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+#fireworks{
+
+position:fixed;
+
+inset:0;
+
+z-index:1;
+
+}
+
+.final-card{
+
+position:relative;
+
+z-index:2;
+
+max-width:850px;
+
+padding:45px;
+
+text-align:center;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(18px);
+
+border-radius:30px;
+
+border:1px solid rgba(255,215,0,.3);
+
+box-shadow:0 0 35px rgba(255,215,0,.2);
+
+}
+
+.big-heart{
+
+font-size:90px;
+
+animation:heartbeat 1.2s infinite;
+
+margin-bottom:20px;
+
+}
+
+.final-card h1{
+
+color:#FFD700;
+
+margin-bottom:10px;
+
+}
+
+.final-card h2{
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+.final-card p{
+
+color:#ddd;
+
+line-height:2;
+
+font-size:17px;
+
+}
+
+#surpriseBtn{
+
+margin-top:35px;
+
+padding:18px 35px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:18px;
+
+font-weight:bold;
+
+background:linear-gradient(135deg,#FFD700,#FFE766,#D4AF37);
+
+}
+
+.ending{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+background:#020b24;
+
+text-align:center;
+
+padding:25px;
+
+}
+
+.ending h1{
+
+font-size:120px;
+
+animation:heartbeat 1.2s infinite;
+
+}
+
+.ending h2{
+
+color:#FFD700;
+
+margin:20px 0;
+
+}
+
+.ending p{
+
+color:white;
+
+line-height:2;
+
+max-width:700px;
+
+}
+
+.confetti{
+
+margin-top:40px;
+
+font-size:40px;
+
+animation:fadeUp 2s infinite;
+
+}.signature{
+
+margin-top:50px;
+
+font-size:24px;
+
+color:#FFD700;
+
+font-weight:600;
+
+line-height:1.8;
+
+animation:fadeUp 2s;
+
+}
+
+.signature span{
+
+display:block;
+
+font-size:18px;
+
+font-style:italic;
+
+color:white;
+
+margin-top:10px;
+
+letter-spacing:2px;
+
+}

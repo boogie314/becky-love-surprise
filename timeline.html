@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Journey ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="timeline-page">
+
+    <div class="timeline-container">
+
+        <h1>✨ Our Journey ✨</h1>
+
+        <div class="timeline">
+
+            <div class="event left">
+                <div class="content">
+                    <h2>🌸 Chapter One</h2>
+                    <p>The day our story began.</p>
+                </div>
+            </div>
+
+            <div class="event right">
+                <div class="content">
+                    <h2>😊 Chapter Two</h2>
+                    <p>The smiles, conversations, and memories that made every day brighter.</p>
+                </div>
+            </div>
+
+            <div class="event left">
+                <div class="content">
+                    <h2>❤️ Chapter Three</h2>
+                    <p>Today, I'm grateful you're part of my story.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <button id="galleryBtn" type="button">
+            📸 Open My Second last surprise
+        </button>
+
+    </div>
+
+    <script>
+const nextBtn = document.getElementById("galleryBtn");
+
+if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+        window.location.href = "final.html";
+    });
+}
+</script>
